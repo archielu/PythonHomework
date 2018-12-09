@@ -395,10 +395,15 @@ def task_8(
     # under src/.
     from PIL import Image
     from io import BytesIO
-    import utils
+    from utils import draw_text
     r = requests.get(img_url)
     result_img = Image.open(BytesIO(r.content))
-b07902045
+    text = ImageDraw.Draw(result_img)
+    text.ink = 0 + 0*256 + 256*256*256
+    text.text((5,5),"B07902045")
+
+    result_img.show()
+
     # You are allowed to change the img_url to your own image URL.
 
     # Display the image:
@@ -412,3 +417,4 @@ b07902045
     # End of TODO
 
     return result_img
+
