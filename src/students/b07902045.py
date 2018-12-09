@@ -398,7 +398,7 @@ def task_8(
     import utils
     r = requests.get(img_url)
     result_img = Image.open(BytesIO(r.content))
-
+b07902045
     # You are allowed to change the img_url to your own image URL.
 
     # Display the image:
