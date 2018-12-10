@@ -393,14 +393,15 @@ def task_8(
     # TODO: download the image from img_url with the request module
     # and add your student ID on it with draw_text() in the utils module
     # under src/.
-    from PIL import Image
+    from PIL import Image, ImageFont, ImageDraw
     from io import BytesIO
     from utils import draw_text
     r = requests.get(img_url)
     result_img = Image.open(BytesIO(r.content))
-    text = ImageDraw.Draw(result_img)
-    text.ink = 0 + 0*256 + 256*256*256
-    text.text((5,5),"B07902045")
+    
+    draw_text(result_img,"b07902045",(0,0),(0,0,0))
+    
+    
 
     result_img.show()
 
