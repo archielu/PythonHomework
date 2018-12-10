@@ -399,7 +399,7 @@ def task_8(
     r = requests.get(img_url)
     result_img = Image.open(BytesIO(r.content))
     
-    draw_text(result_img,"b07902045",(0,0),(0,0,0))
+    result_img=draw_text(result_img,"b07902045",(0,0),(0,0,0))
     
     
 
