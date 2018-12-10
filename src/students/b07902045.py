@@ -403,7 +403,7 @@ def task_8(
     
     
 
-    result_img.show()
+    
 
     # You are allowed to change the img_url to your own image URL.
 
